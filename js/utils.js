@@ -14,6 +14,7 @@ function createCell(i, j) {
 }
 // I need to make sure 2 mines aren't placed in the same location 
 
+
 function createMine(board) {
     var i = getRandomInt(0, board.length)
     var j = getRandomInt(0, board.length)
@@ -22,8 +23,8 @@ function createMine(board) {
         I: i,
         J: j,
     })
-    // console.log('mine created at cell', i, j)
 }
+
 
 function setMinesNegsCount(board, cellI, cellJ) {
     var neighborsSum = 0;
@@ -40,16 +41,43 @@ function setMinesNegsCount(board, cellI, cellJ) {
 
 }
 
+/// uniqe random numbers
 
+// function createMine(board) {
+//     console.log('iNums',iNums,'jNums',jNums)
+//     var iNums = createArrayOfNumbers ()
+//     var jNums = createArrayOfNumbers ()
+//     var i = drawNum(iNums)
+//     var j = drawNum(jNums)
+//     board[i][j].isMine = true;
+//     gMines.push({
+//         I: i,
+//         J: j,
+//     })
+// }
+
+// function createArrayOfNumbers () {
+//     for (var i = 0; i <= gLevel.SIZE-1 ; i++) {
+//         var nums = []
+//         nums.push(i)
+//     }
+//     return  nums
+// }
+
+// function drawNum() {
+//     var nums = createArrayOfNumbers ()
+//     console.log('nums',nums)
+//     var idx = getRandomInt(0, nums.length - 1)
+//     var num = nums [idx]
+//     nums.splice(idx, 1)
+//     return num
+// }
 function getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min) + min);
 }
 
 
-
-
-
-///
+/// Stop watch
 
 var timeElapsed = 0;
 var timerID = -1;
